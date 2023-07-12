@@ -1,0 +1,44 @@
+#header_container{
+    color:hsl(30, 25%, 89%);
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left_header{
+    display: flex;
+    align-items: center;
+}
+.right_header{
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.slide_section{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.theme{
+    font-size:12px;
+    display: flex;
+    align-items: center;
+}
+
+.slide_choices{
+    font-size: 14px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.slide_bar{
+    height:25%;
+    width: 100%;
+    background-color: hsl(223, 31%, 20%);
+    border-radius: var(--border-radius);
+}
