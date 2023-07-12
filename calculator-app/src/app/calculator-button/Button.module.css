@@ -1,0 +1,15 @@
+.buttonContainer{
+    @apply grid grid-cols-4 gap-4 grid-rows-5;
+    width: 490px;
+}
+
+.button_key{
+    border: solid 1px black;
+    text-align: center;
+}
+.button2{
+    @apply col-span-2;
+    text-align: center;
+    border: solid 1px black;
+}
+
