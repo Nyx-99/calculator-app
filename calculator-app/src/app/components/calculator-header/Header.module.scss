@@ -1,0 +1,101 @@
+@import '../../variables.scss';
+.header_container{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .left_header {
+        display: flex;
+        align-items: center;
+    }
+
+    .right_header {
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+
+        .theme {
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .slide_section {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            .slide_choices {
+                font-size: 14px;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .slide_bar {
+                height: 32%;
+                width: 100%;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                position: relative;
+
+                .choice {
+                    width: calc(100% / 3);
+                    height: 100%;
+                }
+
+                .slide_button {
+                    height: 15px;
+                    width: 15px;
+                    position: absolute;
+                    border-radius: 50%;
+                    margin-left: 3px;
+                    transition: all 0.5s ease;
+                }
+            }
+        }
+    }
+}
+
+.header_container.theme_1 {
+    @extend .header_container;
+    color: $theme2_delete_text;
+
+    .slide_bar {
+        background-color: $theme1_keypad_background;
+
+        .slide_button {
+            background-color: $theme1_equals;
+        }
+    }
+}
+
+
+
+.header_container.theme_2 {
+    @extend .header_container;
+    color: $theme2_text;
+
+    .slide_bar {
+        background-color: $theme2_keypad_background;
+
+        .slide_button {
+            background-color: $theme2_equals;
+        }
+    }
+}
+
+.header_container.theme_3 {
+    @extend .header_container;
+    color: $theme3_delete_text;
+
+    .slide_bar {
+        background-color: $theme3_key_background;
+
+        .slide_button {
+            background-color: $theme3_equals;
+        }
+    }
+}

@@ -1,9 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root {
- --border-radius: 7px;
-}
+
+@import './variables.scss';
 
 * {
   margin: 0;
@@ -15,16 +14,31 @@ body{
   height:100vh;
   width: 1440px;
   font-size: 2em;
-  background-color: hsl(222, 26%, 31%);
   display: flex;
   justify-content: center;
   align-items: center;
+
+  #container{
+    width: 500px;
+    height: 80vh
+  }
 }
 
-#container{
-  width: 500px;
-  height: 80vh
+body.theme_1{
+  @extend body;
+  background-color: $theme1_main_background;
 }
+
+body.theme_2{
+  @extend body;
+  background-color: $theme2_main_background;
+}
+
+body.theme_3{
+  @extend body;
+  background-color: $theme3_main_background;
+}
+
 
 
 

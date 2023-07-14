@@ -1,10 +1,19 @@
 import { buttonKey1, buttonKey2 } from './data'
-import styles from './Button.module.css'
+import { useThemeContext } from '../../store'
+import styles from './Button.module.scss'
 import clsx from 'clsx'
 
 function Button() {
+    const themeContext = useThemeContext()
+    const { theme, setTheme } = themeContext
+    const button_container = clsx(styles.button_container, {
+        [styles.theme_1]: theme == 'theme_1',
+        [styles.theme_2]: theme == 'theme_2',
+        [styles.theme_3]: theme == 'theme_3',
+    })
+
     return (
-        <div className={styles.buttonContainer}>
+        <div className={button_container}>
             {/* <div className={styles.button1}> */}
             {buttonKey1.map((key1) => {
                 const button1 = clsx(styles.button_key, {

@@ -1,5 +1,6 @@
-import './globals.css'
+import './globals.scss'
 import { League_Spartan } from 'next/font/google'
+// import { Header } from './components/calculator-header'
 
 const leagueSpartan = League_Spartan({
   weight: ['700'],
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       <body
         suppressHydrationWarning={true}
         className={leagueSpartan.className}>{children}</body>
+      {/* <Header stategy="beforeInteractive"/> */}
     </html>
   )
 }

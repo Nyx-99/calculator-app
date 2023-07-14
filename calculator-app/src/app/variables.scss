@@ -1,0 +1,39 @@
+$border-radius: 7px;
+// theme 1:
+$theme1_main_background : hsl(222, 26%, 31%);
+$theme1_keypad_background: hsl(223, 31%, 20%);
+$theme1_screen: hsl(224, 36%, 15%);
+$theme1_delete_background: hsl(225, 21%, 49%);
+$theme1_delete_shadow:hsl(224, 28%, 35%);
+$theme1_equals: hsl(6, 63%, 50%);
+$theme1_equals_shadow: hsl(6, 70%, 34%);
+$theme1_key_background: hsl(32, 26%, 89%);
+$theme1_key_shadow: hsl(32, 28%, 65%);
+$theme1_text: hsl(221, 14%, 31%);
+$theme1_delete_text:hsl(0, 0%, 100%);
+
+// theme 2:
+$theme2_main_background : hsl(0, 0%, 90%);
+$theme2_keypad_background: hsl(0, 5%, 81%);
+$theme2_screen: hsl(0, 0%, 93%);
+$theme2_delete_background: hsl(185, 42%, 37%);
+$theme2_delete_shadow:hsl(185, 58%, 25%);
+$theme2_equals: hsl(25, 80%, 53%);
+$theme2_equals_shadow: hsl(25, 99%, 27%);
+$theme2_key_background: hsl(45, 7%, 89%);
+$theme2_key_shadow: hsl(35, 11%, 61%);
+$theme2_text: hsl(60, 10%, 19%);
+$theme2_delete_text:hsl(0, 0%, 100%);
+
+// theme 3
+$theme3_main_background : hsl(0, 2%, 23%);
+$theme3_keypad_background: hsl(0, 0%, 11%);
+$theme3_screen: hsl(0, 0%, 11%);
+$theme3_delete_background: hsl(60, 2%, 83%);
+$theme3_delete_shadow:hsl(60, 4%, 78%);
+$theme3_equals: hsl(35, 100%, 50%);
+$theme3_equals_shadow: hsl(35, 99%, 37%);
+$theme3_key_background: hsl(0, 0%, 31%);
+$theme3_key_shadow: hsl(0, 10%, 21%);
+$theme3_text: hsl(0, 0%, 2%);
+$theme3_delete_text:hsl(0, 0%, 100%);

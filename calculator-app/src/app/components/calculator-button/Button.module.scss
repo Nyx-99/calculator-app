@@ -1,0 +1,96 @@
+@import '../../variables.scss';
+
+.button_container {
+    @apply grid grid-cols-4 gap-5 grid-rows-5;
+    width: 100%;
+    height: 65%;
+    margin-top: 5%;
+    padding: 5%;
+    border-radius: $border-radius;
+
+    .button_key {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: $border-radius;
+    }
+
+    .button_del {
+        font-size: 0.8em;
+    }
+
+    .button2 {
+        @apply col-span-2;
+        text-align: center;
+        border-radius: $border-radius;
+    }
+}
+
+.button_container.theme_1 {
+    @extend .button_container;
+    background-color: $theme1_keypad_background;
+
+    .button_key {
+        background-color: $theme1_key_background;
+        color: $theme1_text;
+        box-shadow: 0px 4px 1px $theme1_key_shadow;
+    }
+
+    .button_del {
+        background-color: $theme1_delete_background;
+        color: $theme1_delete_text;
+        box-shadow: 0px 4px 1px $theme1_delete_shadow;
+    }
+
+    .button_equals {
+        background-color: $theme1_equals;
+        color: $theme1_delete_text;
+        box-shadow: 0px 4px 1px $theme1_equals_shadow;
+    }
+}
+
+.button_container.theme_2 {
+    @extend .button_container;
+    background-color: $theme2_keypad_background;
+
+    .button_key {
+        background-color: $theme2_key_background;
+        color: $theme2_text;
+        box-shadow: 0px 4px 1px $theme2_key_shadow;
+    }
+
+    .button_del {
+        background-color: $theme2_delete_background;
+        color: $theme2_delete_text;
+        box-shadow: 0px 4px 1px $theme2_delete_shadow;
+    }
+
+    .button_equals {
+        background-color: $theme2_equals;
+        color: $theme2_delete_text;
+        box-shadow: 0px 4px 1px $theme2_equals_shadow;
+    }
+}
+
+.button_container.theme_3 {
+    @extend .button_container;
+    background-color: $theme3_keypad_background;
+
+    .button_key {
+        background-color: $theme3_key_background;
+        color: $theme3_delete_text;
+        box-shadow: 0px 4px 1px $theme3_key_shadow;
+    }
+
+    .button_del {
+        background-color: $theme3_delete_background;
+        color: $theme3_delete_text;
+        box-shadow: 0px 4px 1px $theme3_delete_shadow;
+    }
+
+    .button_equals {
+        background-color: $theme3_equals;
+        color: $theme3_delete_text;
+        box-shadow: 0px 4px 1px $theme3_equals_shadow;
+    }
+}
