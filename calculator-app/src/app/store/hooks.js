@@ -6,5 +6,4 @@ const useThemeContext = () => {
     return context
 }
 
-
 export { useThemeContext }

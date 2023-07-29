@@ -1,3 +1,5 @@
 export { default as ThemeProvider } from './Provider'
 export { ThemeContext } from './Context'
 export { useThemeContext } from './hooks'
+export { INPUT_VALUE, DELETE_VALUE, RESET_VALUE, CALCULATE_VALUE, RESULT } from './constants'
+export { initState, inputReducer } from './reducer'

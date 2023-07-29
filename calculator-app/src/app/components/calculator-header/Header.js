@@ -43,7 +43,7 @@ function Header() {
     const choice_2 = useRef()
     const choice_3 = useRef()
 
-    console.log(theme)
+    // console.log(theme)
     function handleChangeTheme(choice) {
         slide_button.current.style.left = choice.current.offsetLeft + 'px';
     }

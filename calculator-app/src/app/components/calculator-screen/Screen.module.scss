@@ -3,19 +3,40 @@
 .screen{
     height: 18%;
     border-radius: $border-radius;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .display{
+        font-size: 1.5em;
+        margin-right: 5%;
+    }
 }
 
 .screen.theme_1{
     @extend .screen;
     background-color:$theme1_screen;
+
+    .display{
+        color: $theme1_delete_text;
+    }
 }
 
 .screen.theme_2{
     @extend .screen;
     background-color:$theme2_screen;
+
+    .display{
+        color: $theme2_text;
+    }
 }
 
 .screen.theme_3{
     @extend .screen;
     background-color:$theme3_screen;
+
+    .display{
+        color: $theme3_text;
+    }
 }
+

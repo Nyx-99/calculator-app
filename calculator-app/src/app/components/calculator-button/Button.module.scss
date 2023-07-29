@@ -13,6 +13,9 @@
         justify-content: center;
         align-items: center;
         border-radius: $border-radius;
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     .button_del {
@@ -34,7 +37,15 @@
         background-color: $theme1_key_background;
         color: $theme1_text;
         box-shadow: 0px 4px 1px $theme1_key_shadow;
+        &:hover{
+            border: solid 5px  $theme1_key_background_hover;
+        }
+
+        // &.active{
+        //     background-color: blue;
+        // }
     }
+
 
     .button_del {
         background-color: $theme1_delete_background;
@@ -78,7 +89,7 @@
 
     .button_key {
         background-color: $theme3_key_background;
-        color: $theme3_delete_text;
+        color: $theme3_text;
         box-shadow: 0px 4px 1px $theme3_key_shadow;
     }
 
@@ -90,7 +101,7 @@
 
     .button_equals {
         background-color: $theme3_equals;
-        color: $theme3_delete_text;
+        color: $theme3_text;
         box-shadow: 0px 4px 1px $theme3_equals_shadow;
     }
 }

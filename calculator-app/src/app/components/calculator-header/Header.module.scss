@@ -44,6 +44,9 @@
                 .choice {
                     width: calc(100% / 3);
                     height: 100%;
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
 
                 .slide_button {
@@ -72,8 +75,6 @@
     }
 }
 
-
-
 .header_container.theme_2 {
     @extend .header_container;
     color: $theme2_text;
@@ -89,7 +90,7 @@
 
 .header_container.theme_3 {
     @extend .header_container;
-    color: $theme3_delete_text;
+    color: $theme3_text;
 
     .slide_bar {
         background-color: $theme3_key_background;

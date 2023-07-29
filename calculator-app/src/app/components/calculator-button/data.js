@@ -2,84 +2,108 @@ const buttonKey1 = [
     // row 1
     {
         id: 'seven',
-        value: '7'
+        number: '7',
+        active : false
     },
     {
         id: 'eight',
-        value: '8'
+        number: '8',
+        active : false
     },
     {
         id: 'nine',
-        value: '9'
+        number: '9',
+        active : false
     },
     {
         id: 'delete',
-        value: 'DEL'
+        value: 'DEL',
+        active : false
+        
     },
 
     // row2
     {
         id: 'four',
-        value: '4'
+        number: '4',
+        active : false
     },
     {
         id: 'five',
-        value: '5'
+        number: '5',
+        active : false
     },
     {
         id: 'six',
-        value: '6'
+        number: '6',
+        active : false
     },
     {
         id: 'add',
-        value: '+'
+        value: '+',
+        operator: '+',
+        active : false
     },
 
     // row3
     {
         id: 'one',
-        value: '1'
+        number: '1',
+        active : false
     },
     {
         id: 'two',
-        value: '2'
+        number: '2',
+        active : false
     },
     {
         id: 'three',
-        value: '3'
+        number: '3',
+        active : false
     },
     {
         id: 'subtract',
-        value: '-'
+        value: '-',       
+        operator: '-',
+        active : false
     },
 
     // row4
     {
         id: 'decimal',
-        value: '.'
+        number: '.',
+        active : false
+    
     },
     {
         id: 'zero',
-        value: '0'
+        number : '0',
+        active : false
     },
     {
         id: 'divide',
-        value: '/'
+        value: '/',
+        operator: '/',
+        active : false
     },
     {
         id: 'multiply',
-        value: 'x'
+        value: 'x',       
+        operator: '*',
+        active : false
     },
 ]
 
 const buttonKey2 = [
     {
         id: 'clear',
-        value: 'RESET'
+        value: 'RESET',
+        active : false
     },
     {
         id: 'equals',
-        value: '='
+        value: '=',
+        active : false
     }
 ]
 export { buttonKey1, buttonKey2 }
