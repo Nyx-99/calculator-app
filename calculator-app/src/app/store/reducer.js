@@ -11,26 +11,19 @@ const inputReducer = (state, action) => {
     switch (action.type) {
         case 'input':
             // When inputting numbers, my calculator should not allow a number to begin with multiple zeros.
-            state.keys[0] === '0' ? state.keys.splice(0,1) : state.keys
+            state.keys[0] === '0' ? state.keys.splice(0, 1) : state.keys
 
             // two . in one number should not be accepted
-            if (action.value === '.')
-            {
-                if (state.keys.includes('.'))
-                {
+            if (action.value === '.') {
+                if (state.keys.includes('.')) {
                     action.value = ''
                 }
-                else if (!/\w/.test(state.keys))
-                {
-                    state.keys = [0 , ...state.keys]
+                else if (!/\w/.test(state.keys)) {
+                    state.keys = [0, ...state.keys]
+                    state.operation = [...state.operation,0]
                 }
             }
-
-            console.log(/\w/.test(state.keys))
-            console.log(action.value)
-            
-            state.keys.length === 0 ? state.keys = [action.value] : state.keys = [...state.keys,action.value]
-            console.log(state.keys)
+            state.keys.length === 0 ? state.keys = [action.value] : state.keys = [...state.keys, action.value]
 
             return {
                 ...state,
@@ -59,29 +52,21 @@ const inputReducer = (state, action) => {
 
         case 'calculate':
             // If 2 or more operators are entered consecutively, the operation performed should be the last operator entered (excluding the negative (-) sign)
-            if (state.operation.includes('+') || state.operation.includes('*') || state.operation.includes('/') || state.keys.includes('-'))
-            {
-                if (action.operator == '+' || action.operator == '*' || action.operator == '/')
-                {
-                    if (!state.operation.includes('-'))
-                    {
-                        for (let i = 0; i < state.operation.length; i++)
-                        {
-                         if (state.operation[i] == '+' || state.operation[i] == '*' || state.operation[i] == '/')
-                         {
-                             state.operation.splice(i,1)
-                         }
+            if (state.operation.includes('+') || state.operation.includes('*') || state.operation.includes('/') || state.keys.includes('-')) {
+                if (action.operator == '+' || action.operator == '*' || action.operator == '/') {
+                    if (!state.operation.includes('-')) {
+                        for (let i = 0; i < state.operation.length; i++) {
+                            if (state.operation[i] == '+' || state.operation[i] == '*' || state.operation[i] == '/') {
+                                state.operation.splice(i, 1)
+                            }
                         }
                     }
-                    else
-                    {
-                        for (let i = 0; i < state.operation.length; i++)
-                        {
-                         if (state.operation[i] == '+' || state.operation[i] == '*' || state.operation[i] == '/' || state.operation[i] == '-')
-                         {
-                             state.operation.splice(i ,2)
-                             
-                         }
+                    else {
+                        for (let i = 0; i < state.operation.length; i++) {
+                            if (state.operation[i] == '+' || state.operation[i] == '*' || state.operation[i] == '/' || state.operation[i] == '-') {
+                                state.operation.splice(i, 2)
+
+                            }
                         }
                     }
                 }
@@ -99,21 +84,44 @@ const inputReducer = (state, action) => {
             if (/\W/.test(state.operation[0])) {
                 state.operation.unshift(state.result)
             }
-
             let calculation = state.operation.join('')
-            let total = parseFloat(eval(calculation).toFixed(15))
-            // round number that close to 0 or close to 1
-            if (Math.abs(total % 1) < 0.00001 || Math.abs(total % 1) > 0.999998) 
+            console.log(state.operation)
+            let total;
+            if (state.operation.length === 0)
             {
-                total = total.toFixed(0)
+                total = 0;
             }
-            return {
-                ...state,
-                key: total,
-                keys: [],
-                operation: [],
-                result: total
+            else 
+            {
+                total = parseFloat(eval(calculation).toFixed(15))
             }
+            // round number that close to 0 or close to 1
+            if (Math.abs(total % 1) < 0.00001 || Math.abs(total % 1) > 0.999998) {
+                total = parseInt(total.toFixed(0))
+            }
+            console.log(typeof total)
+            if (typeof total === 'number')
+            {
+                return {
+                    ...state,
+                    key: total,
+                    keys: [],
+                    operation: [],
+                    result: total
+                }
+            }
+            else
+            {
+                return {
+                    ...state,
+                    key: 'NaN',
+                    keys: [],
+                    operation: [],
+                    result: total
+                }
+            }
+        default:
+            throw new Error
     }
 }
 

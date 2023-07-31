@@ -1,6 +1,6 @@
 @import '../../variables.scss';
 .header_container{
-    height: 10%;
+    height: 70px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -34,7 +34,7 @@
             }
 
             .slide_bar {
-                height: 32%;
+                height: 22px;
                 width: 100%;
                 border-radius: 10px;
                 display: flex;

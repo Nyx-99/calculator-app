@@ -1,12 +1,16 @@
 @import '../../variables.scss';
 
 .screen{
-    height: 18%;
+    height: 110px;
     border-radius: $border-radius;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 
+    @media (max-width: 414px)
+    {
+        height: 90px;
+    }
     .display{
         font-size: 1.5em;
         margin-right: 5%;
