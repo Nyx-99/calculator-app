@@ -26,7 +26,8 @@ Users should be able to:
 
 ### Screenshot
 
-![image](https://github.com/Nyx-99/calculator-app/assets/125676643/ace6611d-585a-45a8-a4da-6023c76e2bb8)
+![image](https://github.com/Nyx-99/calculator-app/assets/125676643/6283fd5c-5d99-41ef-a6f0-e7fc88c7a1bc)
+
 
 ### Links
 
