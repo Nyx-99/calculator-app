@@ -1,5 +1,6 @@
 @import '../../variables.scss';
-.header_container{
+
+.header_container {
     height: 70px;
     width: 100%;
     display: flex;
@@ -35,7 +36,7 @@
 
             .slide_bar {
                 height: 22px;
-                width: 100%;
+                width: 105%;
                 border-radius: 10px;
                 display: flex;
                 align-items: center;
@@ -44,6 +45,7 @@
                 .choice {
                     width: calc(100% / 3);
                     height: 100%;
+
                     &:hover {
                         cursor: pointer;
                     }
@@ -54,9 +56,15 @@
                     width: 15px;
                     position: absolute;
                     border-radius: 50%;
-                    margin-left: 3px;
+                    margin-left: 1px;
                     transition: all 0.5s ease;
+
+                    @media (max-width: 414px) {
+                        height: 13px;
+                        width: 13px;
+                    }
                 }
+
             }
         }
     }
