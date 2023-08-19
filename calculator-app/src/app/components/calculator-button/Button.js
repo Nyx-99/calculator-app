@@ -32,7 +32,7 @@ function Button({ onHandleClick }) {
                         onMouseDown={() => {
                             key1.active = isActive
                             setIsActive(false)
-                            console.log(key1.active)
+                            // console.log(key1.active)
                         }}
                         onMouseUp={() => {
                             key1.active = isActive

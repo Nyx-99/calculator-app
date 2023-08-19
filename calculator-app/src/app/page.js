@@ -9,11 +9,12 @@ import { INPUT_VALUE, DELETE_VALUE, RESET_VALUE, CALCULATE_VALUE, RESULT, initSt
 
 export default function Home() {
   const [state, dispatch] = useReducer(inputReducer, initState)
-  function handleClick(key,id) {
-    if (key.number) {
+  function handleClick(key) {
+    if (key.show) {
       dispatch({
         type: INPUT_VALUE,
-        value: key.number,
+        value: key.number || key.operator,
+        key
       })
       // console.log('input')
     }
@@ -28,7 +29,7 @@ export default function Home() {
       dispatch({
         type: RESET_VALUE
       })
-      console.log('reset')
+      // console.log('reset')
     }
 
     if (key.operator) {
