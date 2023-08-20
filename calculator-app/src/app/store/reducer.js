@@ -3,7 +3,7 @@ const initState = {
     key: 0,
     keys: [],
     operation: [],
-    result: 0,
+    result: '',
 }
 
 // reducer 
@@ -93,12 +93,14 @@ const inputReducer = (state, action) => {
                     }
                 }
             }
+            state.result !== '' ? state.keys = [state.result, ...state.operation] : state.keys = [...state.operation]
 
             return {
                 ...state,
                 // key: state.keys,
-                keys: [...state.operation],
+                keys: [state.keys],
                 operation: [...state.operation],
+                result: state.result,
             }
 
         case 'result':
