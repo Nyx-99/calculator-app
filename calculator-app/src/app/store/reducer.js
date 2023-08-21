@@ -55,7 +55,7 @@ const inputReducer = (state, action) => {
                 key: 0,
                 keys: [],
                 operation: [],
-                result: 0
+                result: ''
             }
 
         case 'calculate':
